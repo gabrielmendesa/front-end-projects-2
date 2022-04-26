@@ -10,7 +10,7 @@ function App() {
     <GlobalProvider>
       <Switch>
         <Route exact path="/" component={ Login } />
-        <Route exact path="/comidas" component={ Food } />
+        <Route exact path="/foods" component={ Food } />
       </Switch>
     </GlobalProvider>
   );

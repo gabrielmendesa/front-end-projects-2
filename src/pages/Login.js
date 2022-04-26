@@ -7,8 +7,8 @@ export default function Login({ history }) {
   const [isDisable, setIsDisable] = useState(true);
 
   const loginValidation = () => {
-    const SETE = 6;
-    if (statePassword.length >= SETE
+    const SEIS = 6;
+    if (statePassword.length >= SEIS
       && stateEmail.includes('@')
       && stateEmail.includes('.com')) {
       return setIsDisable(false);
@@ -26,12 +26,8 @@ export default function Login({ history }) {
     localStorage.setItem('mealsToken', 1);
     localStorage.setItem('cocktailsToken', 1);
     localStorage.setItem('user', JSON.stringify({ email: stateEmail }));
-    history.push('/comidas');
+    history.push('/foods');
   };
-
-  // useEffect(() => {
-  //   loginValidation();
-  // }, [stateEmail, statePassword]);
 
   return (
     <div className="login-container">
