@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from '../components/Header';
 
-export default function Food() {
+export default function FoodsByNationality() {
   return (
     <div>
-      <Header titleName="Foods" />
+      <Header titleName="Explore Nationalities" />
     </div>
   );
 }
