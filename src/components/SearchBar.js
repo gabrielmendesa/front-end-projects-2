@@ -31,9 +31,15 @@ export default function SearchBar() {
   }
 
   async function handleClick() {
+    const { pathname } = history.location;
     const URL = checkURL();
     const recipes = await fetchAPI(URL);
     setRecipes(recipes);
+    if (pathname === '/foods' && recipes.meals.length === 1) {
+      history.push(`${pathname}/${recipes.meals[0].idMeal}`);
+    } else if (pathname === '/drinks' && recipes.drinks.length === 1) {
+      history.push(`${pathname}/${recipes.drinks[0].idDrink}`);
+    }
   }
 
   return (

@@ -14,6 +14,7 @@ import FoodsByNationality from './pages/FoodsByNationality';
 import Profile from './pages/profile';
 import DoneRecipes from './pages/DoneRecipes';
 import FavoriteRecipes from './pages/FavoriteRecipes';
+import Details from './pages/Details';
 
 function App() {
   return (
@@ -39,6 +40,8 @@ function App() {
         <Route exact path="/profile" component={ Profile } />
         <Route exact path="/done-recipes" component={ DoneRecipes } />
         <Route exact path="/favorite-recipes" component={ FavoriteRecipes } />
+        <Route exact path="/foods/:idMeal" component={ Details } />
+        <Route exact path="/drinks/:idMeal" component={ Details } />
       </Switch>
     </GlobalProvider>
   );
