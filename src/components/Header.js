@@ -24,7 +24,6 @@ export default function Header(props) {
       </button>
       {showFilter
         && <SearchBar /> }
-
     </div>
   );
 }
