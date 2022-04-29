@@ -70,6 +70,7 @@
 .recipes-container {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 50px;
   max-width: 360px;
 }
 
@@ -78,7 +79,6 @@
   border-radius: 5px;
   margin: 4px;
   width: 170px;
-
 }
 
 .img-container {
@@ -91,3 +91,11 @@
 .img-container img {
   width: 100%;
 }
+
+.footer {
+  bottom: 0%;
+  display: flex;
+  margin: 10px;
+  position: fixed;
+}
+

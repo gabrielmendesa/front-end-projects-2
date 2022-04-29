@@ -7,7 +7,7 @@ export default function Food() {
   const { recipes } = useContext(globalContext);
 
   return (
-    <div>
+    <div className="pages-footer">
       <Header titleName="Foods" />
       <div className="recipes-container">
         { recipes.meals && recipes.meals.map((recipe, i) => (
