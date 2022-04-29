@@ -10,21 +10,24 @@ export default function Header(props) {
   const [showFilter, setShowFilter] = useState(false);
 
   return (
-    <header className="header-icons">
-      <Link to="/profile">
-        <img src={ profileIcon } alt="Logo-profile" data-testid="profile-top-btn" />
-      </Link>
-      <div data-testid="page-title">{titleName}</div>
-      <button
-        type="button"
-        // data-testid="search-input"
-        onClick={ () => setShowFilter(!showFilter) }
-      >
-        <img src={ searchIcon } alt="Logo-search" data-testid="search-top-btn" />
-      </button>
+    <div>
+      <header className="header-icons">
+        <Link to="/profile">
+          <img src={ profileIcon } alt="Logo-profile" data-testid="profile-top-btn" />
+        </Link>
+        <div data-testid="page-title">{titleName}</div>
+        <button
+          type="button"
+          // data-testid="search-input"
+          onClick={ () => setShowFilter(!showFilter) }
+        >
+          <img src={ searchIcon } alt="Logo-search" data-testid="search-top-btn" />
+        </button>
+      </header>
       {showFilter
         && <SearchBar /> }
-    </header>
+    </div>
+
   );
 }
 Header.propTypes = {

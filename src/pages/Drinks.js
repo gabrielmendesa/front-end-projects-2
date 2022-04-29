@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import globalContext from '../context/globalContext';
 
@@ -27,6 +28,7 @@ export default function Drinks() {
       <div className="recipes-container">
         { recipes.drinks && recipes.drinks.map((recipe, i) => renderRecipes(recipe, i)) }
       </div>
+      <Footer />
     </div>
   );
 }
