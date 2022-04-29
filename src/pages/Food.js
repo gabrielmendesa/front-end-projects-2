@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import globalContext from '../context/globalContext';
 
@@ -22,6 +23,7 @@ export default function Food() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
