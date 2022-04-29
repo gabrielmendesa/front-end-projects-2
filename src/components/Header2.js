@@ -6,12 +6,12 @@ import profileIcon from '../images/profileIcon.svg';
 export default function Header2(props) {
   const { titleName } = props;
   return (
-    <div className="header2-icons">
+    <header className="header2-icons">
       <Link to="/profile">
         <img src={ profileIcon } alt="Logo-profile" data-testid="profile-top-btn" />
       </Link>
       <div data-testid="page-title">{titleName}</div>
-    </div>
+    </header>
   );
 }
 Header2.propTypes = {

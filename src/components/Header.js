@@ -10,7 +10,7 @@ export default function Header(props) {
   const [showFilter, setShowFilter] = useState(false);
 
   return (
-    <div className="header-icons">
+    <header className="header-icons">
       <Link to="/profile">
         <img src={ profileIcon } alt="Logo-profile" data-testid="profile-top-btn" />
       </Link>
@@ -24,7 +24,7 @@ export default function Header(props) {
       </button>
       {showFilter
         && <SearchBar /> }
-    </div>
+    </header>
   );
 }
 Header.propTypes = {
