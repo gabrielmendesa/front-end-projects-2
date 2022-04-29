@@ -7,12 +7,14 @@ export default function Drinks() {
     const num = 12;
     if (i >= num) return '';
     return (
-      <div data-testid={ `${i}-recipe-card` } key={ i }>
-        <img
-          src={ recipe.strDrinkThumb }
-          alt={ recipe.strDrink }
-          data-testid={ `${i}-card-img` }
-        />
+      <div data-testid={ `${i}-recipe-card` } key={ i } className="recipe">
+        <div className="img-container">
+          <img
+            src={ recipe.strDrinkThumb }
+            alt={ recipe.strDrink }
+            data-testid={ `${i}-card-img` }
+          />
+        </div>
         <p data-testid={ `${i}-card-name` }>{recipe.strDrink}</p>
       </div>
     );
@@ -22,7 +24,9 @@ export default function Drinks() {
   return (
     <div>
       <Header titleName="Drinks" />
-      { recipes.drinks && recipes.drinks.map((recipe, i) => renderRecipes(recipe, i)) }
+      <div className="recipes-container">
+        { recipes.drinks && recipes.drinks.map((recipe, i) => renderRecipes(recipe, i)) }
+      </div>
     </div>
   );
 }
