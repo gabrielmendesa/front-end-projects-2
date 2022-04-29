@@ -34,6 +34,14 @@ export default function SearchBar() {
     const { pathname } = history.location;
     const URL = checkURL();
     const recipes = await fetchAPI(URL);
+
+    const check = pathname === '/foods' ? !recipes.meals : !recipes.drinks;
+
+    if (check) {
+      global.alert('Sorry, we haven\'t found any recipes for these filters.');
+      return;
+    }
+
     setRecipes(recipes);
     if (pathname === '/foods' && recipes.meals.length === 1) {
       history.push(`${pathname}/${recipes.meals[0].idMeal}`);
