@@ -8,16 +8,20 @@ export default function Food() {
   return (
     <div>
       <Header titleName="Foods" />
-      { recipes.meals && recipes.meals.map((recipe, i) => (
-        <div data-testid={ `${i}-recipe-card` } key={ i }>
-          <img
-            src={ recipe.strMealThumb }
-            alt={ recipe.strMeal }
-            data-testid={ `${i}-card-img` }
-          />
-          <p data-testid={ `${i}-card-name` }>{recipe.strMeal}</p>
-        </div>
-      ))}
+      <div className="recipes-container">
+        { recipes.meals && recipes.meals.map((recipe, i) => (
+          <div data-testid={ `${i}-recipe-card` } key={ i } className="recipe">
+            <div className="img-container">
+              <img
+                src={ recipe.strMealThumb }
+                alt={ recipe.strMeal }
+                data-testid={ `${i}-card-img` }
+              />
+            </div>
+            <p data-testid={ `${i}-card-name` }>{recipe.strMeal}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

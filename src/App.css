@@ -10,10 +10,6 @@
   width: 100%;
 }
 
-.search-input {
-  border: 1px solid black;
-}
-
 .rocksGlass {
   animation: shake 1s infinite ease;
   max-height: 80vh;
@@ -69,4 +65,29 @@
   100% {
     transform: rotate(-10deg);
   }
+}
+
+.recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 360px;
+}
+
+.recipe {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 4px;
+  width: 170px;
+
+}
+
+.img-container {
+  margin-bottom: 10px;
+  max-height: 100px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.img-container img {
+  width: 100%;
 }

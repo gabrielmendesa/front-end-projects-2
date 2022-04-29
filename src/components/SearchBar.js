@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import globalContext from '../context/globalContext';
 import fetchAPI from '../services/fetchAPI';
+import '../styles/SearchBar.css';
 
 export default function SearchBar() {
   const { setRecipes } = useContext(globalContext);
