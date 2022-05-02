@@ -52,16 +52,18 @@ export default function SearchBar() {
   }
 
   return (
-    <div>
+    <div className="search-container">
       <input
         type="text"
         data-testid="search-input"
         className="search-input"
         onChange={ ({ target }) => setValueInput(target.value) }
+        placeholder="Search Recipe"
       />
-      <div>
-        <label htmlFor="radio-button1">
+      <div className="filter-container">
+        <label htmlFor="radio-button1" className="radio-label">
           <input
+            className="radio-btn"
             name="filter-radio"
             type="radio"
             id="radio-button1"
@@ -72,8 +74,9 @@ export default function SearchBar() {
           Ingredient
         </label>
 
-        <label htmlFor="radio-button2">
+        <label htmlFor="radio-button2" className="radio-label">
           <input
+            className="radio-btn"
             name="filter-radio"
             type="radio"
             value="name"
@@ -83,8 +86,9 @@ export default function SearchBar() {
           />
           Name
         </label>
-        <label htmlFor="radio-button3">
+        <label htmlFor="radio-button3" className="radio-label">
           <input
+            className="radio-btn"
             name="filter-radio"
             type="radio"
             value="firstLetter"
@@ -95,13 +99,16 @@ export default function SearchBar() {
           First Letter
         </label>
       </div>
-      <button
-        type="button"
-        data-testid="exec-search-btn"
-        onClick={ handleClick }
-      >
-        Search
-      </button>
+      <div className="filter-btn-container">
+        <button
+          className="filter-btn-search"
+          type="button"
+          data-testid="exec-search-btn"
+          onClick={ handleClick }
+        >
+          Search
+        </button>
+      </div>
     </div>
   );
 }

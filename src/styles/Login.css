@@ -19,7 +19,6 @@
 }
 
 .login-image {
-  fill: rgb(255, 0, 1);
   height: 5rem;
 }
 
@@ -67,4 +66,8 @@
 
 .login-btn:active {
   background-color: rgb(45, 141, 73);
+}
+
+.login-btn:disabled {
+  background-color: rgb(126, 255, 165);
 }
