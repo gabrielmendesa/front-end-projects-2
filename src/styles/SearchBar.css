@@ -1,5 +1,6 @@
 .search-input {
   background-color: rgb(243, 243, 243);
+  border: 1px solid rgb(218, 218, 218);
   border-radius: 10px;
   margin: 4rem 7px 7px;
   padding: 10px;

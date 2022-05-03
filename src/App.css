@@ -86,6 +86,7 @@
 
 .recipe {
   border-radius: 10px;
+  box-shadow: 2px 2px 10px rgb(117, 117, 117);
   margin: 5px;
   width: 150px;
 }
