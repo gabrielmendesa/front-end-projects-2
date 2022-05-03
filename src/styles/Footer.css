@@ -1,0 +1,18 @@
+.footer {
+  align-items: center;
+  background-color: var(--main-color);
+  bottom: 0%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  position: fixed;
+  width: 100%;
+}
+
+.footer img {
+  filter: invert(100%);
+  height: var(--icons-size);
+  margin-left: 10px;
+  margin-right: 10px;
+}

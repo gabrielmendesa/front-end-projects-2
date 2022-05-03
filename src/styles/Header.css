@@ -1,0 +1,28 @@
+header {
+  align-items: center;
+  background-color: var(--main-color);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 10000;
+}
+
+.screen-name {
+  color: white;
+}
+
+.header-icons img {
+  filter: invert(100%);
+  height: var(--icons-size);
+  margin-left: 10px;
+  margin-right: 10px;
+  width: var(--icons-size);
+}
+
+.header-search {
+  background-color: transparent;
+}
